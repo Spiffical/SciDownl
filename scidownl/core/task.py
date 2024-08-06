@@ -65,7 +65,7 @@ class ScihubTask(BaseTask):
         source = self.source_class(self.source_keyword)
         crawler = ScihubCrawler(source, scihub_url, self)
         content = crawler.crawl()
-
+        
         extractor = HtmlPdfExtractor(content, self)
         pdf_url_title_info = extractor.extract()
 
